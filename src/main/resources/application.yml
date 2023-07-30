@@ -1,0 +1,28 @@
+
+#Basic Spring Boot Config for Oracle
+datasource:
+  oracle:
+    url: jdbc:oracle:thin:@//localhost:1521/ORCL
+    username: system
+    password: YassMel97@
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  postgres:
+    url: jdbc:postgresql://localhost:5432/multiple-ds
+    username: postgres
+    password: YassMel97
+    driver-class-name: org.postgresql.Driver
+
+#datasource.oracle.initialize=true
+#hibernate config
+jpa:
+  oracle:
+    database-platform: org.hibernate.dialect.OracleDialect
+  postgres:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  hibernate.ddl-auto: update
+  show-sql: true
+
+
+
+#datasource.postgres.initialize=true
